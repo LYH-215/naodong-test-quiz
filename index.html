@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="脑洞测试局 - 趣味剧情人格测试，仅供娱乐">
+  <title>脑洞测试局 · 趣味剧情人格测试</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#/" data-nav>
+        <span class="brand__mark">✦</span>
+        <span class="brand__name">脑洞测试局</span>
+      </a>
+      <nav class="nav">
+        <a href="#/" data-nav class="nav__link">首页</a>
+        <a href="#/member" data-nav class="nav__link">会员</a>
+        <a href="#/admin" data-nav class="nav__link nav__link--sub">管理</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页面挂载点 -->
+  <main id="app" class="app"></main>
+
+  <!-- 固定免责声明条 -->
+  <div class="disclaimer-bar" id="disclaimerBar"></div>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>脑洞测试局 · 趣味脑洞向剧情测试 · 仅供娱乐</p>
+    <p>本测试不具备科学测评、心理诊断效力</p>
+  </footer>
+
+  <!-- 模态框容器 -->
+  <div id="modalRoot"></div>
+
+  <script src="config.js"></script>
+  <script src="seed-data.js"></script>
+  <script src="data.js"></script>
+  <script src="poster.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
