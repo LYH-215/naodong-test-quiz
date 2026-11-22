@@ -10,7 +10,7 @@
  *   emoji,             // 封面装饰符号（不用外部图片也能好看）
  *   coverColors,       // 封面渐变色 [起始, 结束]
  *   desc,              // 进入测试页的介绍
- *   questions: [       // 6~8 道题
+ *   questions: [       // 18~20 道题
  *     {
  *       id, title,
  *       options: [     // 每题固定 4 个选项
@@ -41,7 +41,7 @@ const tests = [
     subtitle: '一睁眼到了陌生世界，你的开局会是怎样？',
     emoji: '🌿',
     coverColors: ['#8FD3B6', '#5FB99A'],
-    desc: '假如某天你穿越进一部没有剧本的剧，7 道题看看你会拿到什么开局身份。',
+    desc: '假如某天你穿越进一部没有剧本的剧，19 道题看看你会拿到什么开局身份。',
     questions: [
       {
         id: 't1q1', title: '醒来发现自己躺在陌生的草地，你第一件事是？',
@@ -105,6 +105,114 @@ const tests = [
           { key: 'C', text: '写下这里的故事和规矩', weights: { scholar: 3, knight: 1, scout: 0, artisan: 0 } },
           { key: 'D', text: '成为一个被人记住的名字', weights: { knight: 3, artisan: 1, scout: 0, scholar: 0 } }
         ]
+      },
+      {
+        id: 't1q8', title: '村里说要选一个人去邻邦谈判，你会？',
+        options: [
+          { key: 'A', text: '先把路线和对方底细摸清楚', weights: { scout: 3, scholar: 1, knight: 0, artisan: 0 } },
+          { key: 'B', text: '带上几件拿得出手的小礼物', weights: { artisan: 3, scout: 1, scholar: 0, knight: 0 } },
+          { key: 'C', text: '先研究两国的规矩和利害', weights: { scholar: 3, artisan: 1, scout: 0, knight: 0 } },
+          { key: 'D', text: '主动站出来，"我去吧"', weights: { knight: 3, scholar: 1, scout: 0, artisan: 0 } }
+        ]
+      },
+      {
+        id: 't1q9', title: '天气突然变冷，没有火种，你会？',
+        options: [
+          { key: 'A', text: '找到背风的洼地先安顿下来', weights: { scout: 3, artisan: 1, scholar: 0, knight: 0 } },
+          { key: 'B', text: '想办法钻木取火', weights: { artisan: 3, knight: 1, scout: 0, scholar: 0 } },
+          { key: 'C', text: '回忆哪些材料最容易生热', weights: { scholar: 3, scout: 1, knight: 0, artisan: 0 } },
+          { key: 'D', text: '招呼大家抱团取暖，先扛过去', weights: { knight: 3, artisan: 1, scout: 0, scholar: 0 } }
+        ]
+      },
+      {
+        id: 't1q10', title: '你最想被新世界的同伴怎么称呼？',
+        options: [
+          { key: 'A', text: '"问路找他准没错"', weights: { scout: 3, knight: 1, scholar: 0, artisan: 0 } },
+          { key: 'B', text: '"有东西坏了就找他"', weights: { artisan: 3, scholar: 1, knight: 0, scout: 0 } },
+          { key: 'C', text: '"这事问他，他懂得多"', weights: { scholar: 3, scout: 1, artisan: 0, knight: 0 } },
+          { key: 'D', text: '"关键时刻还得是他"', weights: { knight: 3, artisan: 1, scout: 0, scholar: 0 } }
+        ]
+      },
+      {
+        id: 't1q11', title: '路过一片没见过的花田，你会？',
+        options: [
+          { key: 'A', text: '留意这片花田在地图上的位置', weights: { scout: 3, scholar: 1, knight: 0, artisan: 0 } },
+          { key: 'B', text: '采一些回去试着做染料', weights: { artisan: 3, scout: 1, scholar: 0, knight: 0 } },
+          { key: 'C', text: '蹲下来研究它为什么会这样开', weights: { scholar: 3, artisan: 1, scout: 0, knight: 0 } },
+          { key: 'D', text: '喊大家一起来拍照留念', weights: { knight: 3, scholar: 1, scout: 0, artisan: 0 } }
+        ]
+      },
+      {
+        id: 't1q12', title: '有个麻烦不断找上门，你的处理方式是？',
+        options: [
+          { key: 'A', text: '先弄清它出现的规律，躲开锋芒', weights: { scout: 3, scholar: 1, knight: 0, artisan: 0 } },
+          { key: 'B', text: '做个小机关，让它不再来', weights: { artisan: 3, knight: 1, scout: 0, scholar: 0 } },
+          { key: 'C', text: '分析根源，一次性解决', weights: { scholar: 3, scout: 1, knight: 0, artisan: 0 } },
+          { key: 'D', text: '正面迎上去，把它摆平', weights: { knight: 3, artisan: 1, scout: 0, scholar: 0 } }
+        ]
+      },
+      {
+        id: 't1q13', title: '给你一天自由时间，你会花在？',
+        options: [
+          { key: 'A', text: '去探索还没去过的山谷', weights: { scout: 3, artisan: 1, scholar: 0, knight: 0 } },
+          { key: 'B', text: '窝在工坊里打磨新作品', weights: { artisan: 3, scholar: 1, knight: 0, scout: 0 } },
+          { key: 'C', text: '泡在藏书阁里读个痛快', weights: { scholar: 3, knight: 1, scout: 0, artisan: 0 } },
+          { key: 'D', text: '和伙伴们比武、闹个痛快', weights: { knight: 3, scout: 1, artisan: 0, scholar: 0 } }
+        ]
+      },
+      {
+        id: 't1q14', title: '队伍食物快要吃完，你主张？',
+        options: [
+          { key: 'A', text: '找找附近有没有可食用的野物', weights: { scout: 3, scholar: 1, knight: 0, artisan: 0 } },
+          { key: 'B', text: '把现有食材重新加工，撑久一点', weights: { artisan: 3, scout: 1, scholar: 0, knight: 0 } },
+          { key: 'C', text: '算清楚每个人每天的份量', weights: { scholar: 3, artisan: 1, scout: 0, knight: 0 } },
+          { key: 'D', text: '我去多打点猎回来', weights: { knight: 3, scholar: 1, scout: 0, artisan: 0 } }
+        ]
+      },
+      {
+        id: 't1q15', title: '有人说你变了，你的第一反应？',
+        options: [
+          { key: 'A', text: '想想是不是去了新的地方、见了新的人', weights: { scout: 3, scholar: 1, knight: 0, artisan: 0 } },
+          { key: 'B', text: '看看自己做的东西是不是不一样了', weights: { artisan: 3, scout: 1, scholar: 0, knight: 0 } },
+          { key: 'C', text: '认真想想，自己到底哪里不同', weights: { scholar: 3, artisan: 1, scout: 0, knight: 0 } },
+          { key: 'D', text: '变就变呗，我照旧往前冲', weights: { knight: 3, scholar: 1, scout: 0, artisan: 0 } }
+        ]
+      },
+      {
+        id: 't1q16', title: '要教一个新伙伴生存技能，你会先教？',
+        options: [
+          { key: 'A', text: '怎么辨认方向和地形', weights: { scout: 3, knight: 1, scholar: 0, artisan: 0 } },
+          { key: 'B', text: '怎么动手做基本工具', weights: { artisan: 3, scout: 1, scholar: 0, knight: 0 } },
+          { key: 'C', text: '这个世界的规则和常识', weights: { scholar: 3, artisan: 1, scout: 0, knight: 0 } },
+          { key: 'D', text: '遇到危险时怎么保护自己', weights: { knight: 3, scholar: 1, scout: 0, artisan: 0 } }
+        ]
+      },
+      {
+        id: 't1q17', title: '如果发现一个被遗忘的小村落，你会？',
+        options: [
+          { key: 'A', text: '先把它的位置记下来，画进地图', weights: { scout: 3, scholar: 1, knight: 0, artisan: 0 } },
+          { key: 'B', text: '帮他们修修坏了的东西', weights: { artisan: 3, scout: 1, scholar: 0, knight: 0 } },
+          { key: 'C', text: '记录下他们的故事和习俗', weights: { scholar: 3, knight: 1, scout: 0, artisan: 0 } },
+          { key: 'D', text: '张罗着让大家重新热闹起来', weights: { knight: 3, artisan: 1, scout: 0, scholar: 0 } }
+        ]
+      },
+      {
+        id: 't1q18', title: '穿越这件事，如果只能带走一样东西，你选？',
+        options: [
+          { key: 'A', text: '一张标满记号的地图', weights: { scout: 3, artisan: 1, scholar: 0, knight: 0 } },
+          { key: 'B', text: '一个装满了工具的小箱子', weights: { artisan: 3, knight: 1, scout: 0, scholar: 0 } },
+          { key: 'C', text: '一本什么都记的笔记本', weights: { scholar: 3, scout: 1, knight: 0, artisan: 0 } },
+          { key: 'D', text: '一身能护住自己的装备', weights: { knight: 3, scholar: 1, scout: 0, artisan: 0 } }
+        ]
+      },
+      {
+        id: 't1q19', title: '故事的最后，你希望别人怎么形容你？',
+        options: [
+          { key: 'A', text: '"他总能带大家找到方向"', weights: { scout: 3, scholar: 1, knight: 0, artisan: 0 } },
+          { key: 'B', text: '"他把日子过得越来越好"', weights: { artisan: 3, scout: 1, scholar: 0, knight: 0 } },
+          { key: 'C', text: '"他让大家都明白了不少事"', weights: { scholar: 3, artisan: 1, scout: 0, knight: 0 } },
+          { key: 'D', text: '"有他在，我们什么都不怕"', weights: { knight: 3, scout: 1, scholar: 0, artisan: 0 } }
+        ]
       }
     ],
     results: [
@@ -142,7 +250,7 @@ const tests = [
     subtitle: '表面之下的你，藏着怎样的一面？',
     emoji: '🫧',
     coverColors: ['#B8A6E6', '#8E7BCB'],
-    desc: '每个人都有自己的 B 面。6 道题，看看平时不为人知的那个你是什么样。',
+    desc: '每个人都有自己的 B 面。19 道题，看看平时不为人知的那个你是什么样。',
     questions: [
       {
         id: 't2q1', title: '周末突然空出一整天，你更想？',
@@ -197,6 +305,123 @@ const tests = [
           { key: 'C', text: '一秒学会任何新东西', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
           { key: 'D', text: '把想象变成现实', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
         ]
+      },
+      {
+        id: 't2q7', title: '深夜一个人在家，突然听到一点动静，你？',
+        options: [
+          { key: 'A', text: '喊一声"谁呀"，给自己壮壮胆', weights: { warm: 3, calm: 1, curious: 0, dream: 0 } },
+          { key: 'B', text: '先不动，静静听清楚再说', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '好奇心上来，想去看个究竟', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '脑子里已经演了三集悬疑剧', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q8', title: '你的手机相册里，最多的可能是？',
+        options: [
+          { key: 'A', text: '和朋友的合照、聚会的抓拍', weights: { warm: 3, curious: 1, calm: 0, dream: 0 } },
+          { key: 'B', text: '风景、天空、安静的角落', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '新店、新发现、稀奇的东西', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '随手拍的、只有自己懂的画面', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q9', title: '一场聚会结束后，你通常的感觉是？',
+        options: [
+          { key: 'A', text: '舍不得散，还想在聊会儿', weights: { warm: 3, calm: 1, curious: 0, dream: 0 } },
+          { key: 'B', text: '挺好，但有点想回家歇着', weights: { calm: 3, warm: 1, curious: 0, dream: 0 } },
+          { key: 'C', text: '意犹未尽，还想接着探索下一场', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '脑子里还在回放今晚的画面', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q10', title: '如果你突然消失一天，朋友最可能？',
+        options: [
+          { key: 'A', text: '早早来找你，担心你是不是没事', weights: { warm: 3, curious: 1, calm: 0, dream: 0 } },
+          { key: 'B', text: '想着你可能想安静，先不打扰', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '到处找你，还顺藤摸瓜查原因', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '猜测你是不是去经历什么故事了', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q11', title: '有人说了一句让你不太舒服的话，你？',
+        options: [
+          { key: 'A', text: '先照顾场面，回头再悄悄消化', weights: { warm: 3, calm: 1, curious: 0, dream: 0 } },
+          { key: 'B', text: '先放一放，不急着回应', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '追问一句，想搞清楚他什么意思', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '在心里把它编进一个小剧场', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q12', title: '给你一间完全属于自己的房间，你会先？',
+        options: [
+          { key: 'A', text: '摆满家人朋友的照片和纪念品', weights: { warm: 3, calm: 1, curious: 0, dream: 0 } },
+          { key: 'B', text: '收拾得清爽简单，东西各归其位', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '到处摆上淘来的新鲜玩意儿', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '布置一个只有自己懂的小天地', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q13', title: '别人送你一件你没提过要求的小礼物，你会？',
+        options: [
+          { key: 'A', text: '特别感动，觉得被放在心上', weights: { warm: 3, curious: 1, calm: 0, dream: 0 } },
+          { key: 'B', text: '安静收好，记下这份心意', weights: { calm: 3, warm: 1, curious: 0, dream: 0 } },
+          { key: 'C', text: '好奇对方是怎么猜到我喜欢它的', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '觉得它像是命中注定的小浪漫', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q14', title: '你的闹钟响了，但你还可以赖十分钟，你？',
+        options: [
+          { key: 'A', text: '先给在乎的人发条早安消息', weights: { warm: 3, calm: 1, curious: 0, dream: 0 } },
+          { key: 'B', text: '安安静静地赖着，享受这一刻', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '刷一刷有什么新鲜事', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '抓紧时间做完昨晚没做完的梦', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q15', title: '一个陌生的场合，大家都在聊天，你？',
+        options: [
+          { key: 'A', text: '很快和旁边的人聊起来', weights: { warm: 3, curious: 1, calm: 0, dream: 0 } },
+          { key: 'B', text: '先找个舒服的位置坐定', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '饶有兴趣地听每个人讲故事', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '看着看着，开始脑补人物关系', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q16', title: '如果生活能加一个小设定，你想要？',
+        options: [
+          { key: 'A', text: '身边的每个人都能天天开心', weights: { warm: 3, dream: 1, calm: 0, curious: 0 } },
+          { key: 'B', text: '永远不慌不忙，时间刚刚好', weights: { calm: 3, warm: 1, curious: 0, dream: 0 } },
+          { key: 'C', text: '每天都能发现一件新鲜事', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '做的梦都能记得清清楚楚', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q17', title: '你更愿意把心事放在哪里？',
+        options: [
+          { key: 'A', text: '说给一个特别信任的人听', weights: { warm: 3, calm: 1, curious: 0, dream: 0 } },
+          { key: 'B', text: '锁进自己的抽屉，慢慢消化', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '写下来，或者查点资料想明白', weights: { curious: 3, calm: 1, warm: 0, dream: 0 } },
+          { key: 'D', text: '藏进只有自己知道的故事里', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q18', title: '别人说你"看起来很安静"，你会？',
+        options: [
+          { key: 'A', text: '笑一笑，其实和熟的人话很多', weights: { warm: 3, curious: 1, calm: 0, dream: 0 } },
+          { key: 'B', text: '点点头，本来就喜欢安静', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '心里想，那是因为你还不了解我', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '不解释，脑子里另有一片热闹', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
+      },
+      {
+        id: 't2q19', title: '如果给自己的这一面起个名字，你会叫？',
+        options: [
+          { key: 'A', text: '那个总在照顾别人的我', weights: { warm: 3, calm: 1, curious: 0, dream: 0 } },
+          { key: 'B', text: '那个不慌不忙的我', weights: { calm: 3, dream: 1, warm: 0, curious: 0 } },
+          { key: 'C', text: '那个永远好奇的我', weights: { curious: 3, warm: 1, calm: 0, dream: 0 } },
+          { key: 'D', text: '那个爱做梦的我', weights: { dream: 3, calm: 1, warm: 0, curious: 0 } }
+        ]
       }
     ],
     results: [
@@ -232,9 +457,11 @@ const tests = [
     id: 'partner',
     title: '恋爱搭子适配测试',
     subtitle: '什么样的相处方式，最让你心动？',
+    // 会员专享：未开通会员不能开始答题（前台首页会显示「会员专享」标识）
+    memberOnly: true,
     emoji: '🍃',
     coverColors: ['#F2A9A0', '#E07B72'],
-    desc: '不谈玄学，只聊相处。7 道题看看什么样的人最可能对上你的频率。',
+    desc: '不谈玄学，只聊相处。19 道题看看什么样的人最可能对上你的频率。',
     questions: [
       {
         id: 't3q1', title: '理想的周末约会是？',
@@ -298,6 +525,114 @@ const tests = [
           { key: 'C', text: '舒服自在，不用伪装', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
           { key: 'D', text: '精神同频，聊得来', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
         ]
+      },
+      {
+        id: 't3q8', title: '你们难得都有空的一天，却谁都没提计划，你？',
+        options: [
+          { key: 'A', text: '临时起意，出门随便逛到哪算哪', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '提议去找家一直想去的小店', weights: { food: 3, home: 1, explore: 0, talk: 0 } },
+          { key: 'C', text: '正好，就在家窝一天吧', weights: { home: 3, food: 1, explore: 0, talk: 0 } },
+          { key: 'D', text: '泡杯茶，慢慢聊到天黑', weights: { talk: 3, home: 1, explore: 0, food: 0 } }
+        ]
+      },
+      {
+        id: 't3q9', title: '对方分享了一件小事给你，你更可能？',
+        options: [
+          { key: 'A', text: '立刻约ta去现场看看', weights: { explore: 3, food: 1, home: 0, talk: 0 } },
+          { key: 'B', text: '记下来，下次吃饭时提起', weights: { food: 3, talk: 1, home: 0, explore: 0 } },
+          { key: 'C', text: '听一听，陪ta高兴就好', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
+          { key: 'D', text: '追问细节，聊个没完', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q10', title: '你们闹了点别扭，你希望怎么和好？',
+        options: [
+          { key: 'A', text: '一起出去走走，换个环境就好了', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '吃顿好的，气氛自然就缓和了', weights: { food: 3, home: 1, explore: 0, talk: 0 } },
+          { key: 'C', text: '各自安静一下，过会儿就好了', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
+          { key: 'D', text: '把话说开，比什么都强', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q11', title: '如果对方为你准备一个惊喜，你最想要？',
+        options: [
+          { key: 'A', text: '一趟没告诉目的地的短途旅行', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '一桌你爱吃的菜', weights: { food: 3, home: 1, explore: 0, talk: 0 } },
+          { key: 'C', text: '什么安排都没有的一整天', weights: { home: 3, food: 1, explore: 0, talk: 0 } },
+          { key: 'D', text: '一封写满心里话的长信', weights: { talk: 3, home: 1, food: 0, explore: 0 } }
+        ]
+      },
+      {
+        id: 't3q12', title: '对方说"今天有点累"，你会？',
+        options: [
+          { key: 'A', text: '拉ta出门透透气，换换心情', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '点一份ta爱吃的外卖', weights: { food: 3, home: 1, explore: 0, talk: 0 } },
+          { key: 'C', text: '让ta好好躺着，不打扰', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
+          { key: 'D', text: '陪ta聊聊，把烦心事倒出来', weights: { talk: 3, food: 1, explore: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q13', title: '你们给彼此的默契起个名字，会叫？',
+        options: [
+          { key: 'A', text: '说走就走二人组', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '干饭搭子联盟', weights: { food: 3, home: 1, explore: 0, talk: 0 } },
+          { key: 'C', text: '舒适区常驻民', weights: { home: 3, food: 1, explore: 0, talk: 0 } },
+          { key: 'D', text: '深夜聊天室', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q14', title: '有件事你拿不定主意，你希望对方？',
+        options: [
+          { key: 'A', text: '拉我一起去试试，试了就知道', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '请我吃顿饭，边吃边想', weights: { food: 3, talk: 1, home: 0, explore: 0 } },
+          { key: 'C', text: '先别急，回家睡一觉再说', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
+          { key: 'D', text: '听我把想法说完，一起捋清楚', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q15', title: '你最不希望和两个人的日子变成？',
+        options: [
+          { key: 'A', text: '哪儿都不去，一成不变', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '各吃各的，没了烟火气', weights: { food: 3, home: 1, explore: 0, talk: 0 } },
+          { key: 'C', text: '总被打扰，没有独处空间', weights: { home: 3, food: 1, explore: 0, talk: 0 } },
+          { key: 'D', text: '无话可说，只剩沉默', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q16', title: '法定长假，你的理想安排是？',
+        options: [
+          { key: 'A', text: '去一个没去过的城市', weights: { explore: 3, food: 1, home: 0, talk: 0 } },
+          { key: 'B', text: '去一座以美食出名的城市', weights: { food: 3, explore: 1, talk: 0, home: 0 } },
+          { key: 'C', text: '哪也不去，在家好好休息', weights: { home: 3, food: 1, explore: 0, talk: 0 } },
+          { key: 'D', text: '找个安静地方，慢慢聊很多事', weights: { talk: 3, home: 1, food: 0, explore: 0 } }
+        ]
+      },
+      {
+        id: 't3q17', title: '对方做了个你不太认同的决定，你？',
+        options: [
+          { key: 'A', text: '先陪ta去经历，边走边看', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '先吃饭，好言好语慢慢说', weights: { food: 3, talk: 1, home: 0, explore: 0 } },
+          { key: 'C', text: '给ta空间，尊重ta的选择', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
+          { key: 'D', text: '认真把你的想法讲清楚', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q18', title: '你们第一次见面的地方，最好能？',
+        options: [
+          { key: 'A', text: '有点新奇，可以一起探索', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '有好吃的东西，边吃边聊', weights: { food: 3, talk: 1, home: 0, explore: 0 } },
+          { key: 'C', text: '安静舒服，让人放松', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
+          { key: 'D', text: '能聊得尽兴，忘记时间', weights: { talk: 3, explore: 1, food: 0, home: 0 } }
+        ]
+      },
+      {
+        id: 't3q19', title: '如果只能给对方一句相处约定，你会说？',
+        options: [
+          { key: 'A', text: '我们一起去看更多地方', weights: { explore: 3, talk: 1, food: 0, home: 0 } },
+          { key: 'B', text: '每顿饭都好好一起吃', weights: { food: 3, home: 1, explore: 0, talk: 0 } },
+          { key: 'C', text: '在对方面前可以做自己', weights: { home: 3, food: 1, talk: 0, explore: 0 } },
+          { key: 'D', text: '有什么都讲给我听', weights: { talk: 3, home: 1, food: 0, explore: 0 } }
+        ]
       }
     ],
     results: [
@@ -329,5 +664,6 @@ const tests = [
   }
 ];
 
-// 浏览器环境：挂载到全局，供 data.js 读取
-window.SEED_TESTS = tests;
+// 同时兼容浏览器（window.SEED_TESTS）与 Node（module.exports），服务端初始化题库时复用
+if (typeof window !== 'undefined') window.SEED_TESTS = tests;
+if (typeof module !== 'undefined' && module.exports) module.exports = tests;
